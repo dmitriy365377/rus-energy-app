@@ -1,0 +1,82 @@
+.sphere {
+    background-image: url("../../pictures/Oval.svg"),url("../../pictures/Oval-2.svg");
+    position: absolute;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 48px 0px, 0px 281px;
+    width: 100%;
+    height: 100%; 
+}
+
+.ellipse{
+    background-image: url("../../pictures/Ellipse.svg");
+    background-repeat: no-repeat;
+    width: 316px;
+    height: 316px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -158px;
+}
+
+.content {
+    position: absolute;
+    width: 305px;
+    height: 172px;
+    left: 35px;
+    top: 500px;
+    text-align: center;
+}
+
+.welcome {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.informationfirst {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.informationsecond {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    margin-top: -1.0em;
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+    padding: 14px 122px;
+    background: #EE4E23;
+    border-radius: 10px;
+}
+
+.skip {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    color: #7A9AAA;
+}
+
+.further {
+    font-family: SF UI Display;
+    font-style: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    order: 0;
+    align-self: center;
+    margin: 2px 0px;
+}
