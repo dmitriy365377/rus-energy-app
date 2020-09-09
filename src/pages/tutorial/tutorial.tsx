@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './tutorial.module.scss';
+import { Redirect } from 'react-router'
 
 const items = [
     { title: 'Получить доступ', firstContent: 'Для входа в личный кабинет необходимо знать', secondContent: 'Ваш номер лицевого счета.' },
@@ -7,7 +8,7 @@ const items = [
     { title: 'Узнать о задолженности', firstContent: 'Посмотреть задолженность историю оплат', secondContent: 'показания за выбранной период.' },
 ]
 
-type oneItem = { title: string, firstContent: string , secondContent: string};
+type oneItem = { title: string, firstContent: string, secondContent: string };
 
 
 const Content = ({ title, firstContent, secondContent }: oneItem) => (
@@ -21,13 +22,18 @@ const Content = ({ title, firstContent, secondContent }: oneItem) => (
 export const Tutorial: React.FC = () => {
     const [active, setActive] = useState<number>(0);
 
-    // if (active >= items.length){
-    //     return <Redirect to="/" />
-    // }
-    
-    const changeText = ()  => {
+    if (active >= items.length) {
+        return <Redirect to="/sign-in" />
+    }
+
+    const changeText = () => {
         setActive(prev => prev + 1);
     }
+
+    const changeRoute = () => {
+        setActive(3)
+    }
+
 
 
     return (
@@ -41,7 +47,12 @@ export const Tutorial: React.FC = () => {
                 <span className={classes.action} onClick={changeText} >
                     <span className={classes.further}>Далее</span>
                 </span>
-                {active === items.length - 1 ? null : <p className={classes.skip}>Пропустить</p>}
+                {active === items.length - 1 ? null : <p
+                    className={classes.skip}
+                    onClick={changeRoute}
+                >Пропустить
+                </p>
+                }
             </div>
         </>
     )

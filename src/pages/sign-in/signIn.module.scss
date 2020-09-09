@@ -1,0 +1,100 @@
+.titlecontainer {
+    width: 268px;
+    margin-left: 35px;
+    margin-top: 40px;
+}
+
+.title1 {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #262626;
+}
+
+.title2 {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7A9AAA;
+    mix-blend-mode: normal;
+}
+
+.formcontainer {
+    width: 375px;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+
+.labeluser {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.inputusername {
+    position:relative;
+}
+
+.inputline {
+    margin-top: 20px;
+    height:20px; 
+    padding-right: 30px;
+    border: none;
+    border-bottom: 2px solid rgba(122, 154, 170, 0.2);
+    width: 50%;
+    outline: none;
+    padding-left: 30px; 
+}
+
+.input_img {
+    position:absolute;
+    bottom:6px; 
+    width:24px;
+    height:24px;
+    left: 0px;
+}
+
+.labelpassword {
+    margin-top: 38px;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.inputpassword {
+    position:relative;
+}
+
+.input_second_img {
+    position:absolute;
+    bottom:6px; 
+    width:24px;
+    height:24px;
+}
+
+.terms_and_conditions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 200px;
+}
+
+.color_text {
+    color: #ee4e23;
+}
+
+.check_in {
+    padding: 14px 125px;
+    background: #F2F3F5;
+    border-radius: 10px;
+}
