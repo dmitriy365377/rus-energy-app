@@ -97,4 +97,37 @@
     padding: 14px 125px;
     background: #F2F3F5;
     border-radius: 10px;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    outline: 0;
+}
+
+.restore {
+    display: flex;
+    justify-content: space-between;
+    width: 61%;
+    margin-left: 33px;
+    margin-top: 10px;
+}
+
+.forgotpassword {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #7A9AAA;
+}
+
+.recover {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #ee4e23;
+}
+
+.errors {
+    font-size: 13px;
+    color: red;
+    font-family: SF UI Display;
 }
