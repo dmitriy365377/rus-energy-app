@@ -3,13 +3,13 @@ import { Tutorial } from './pages/tutorial/tutorial'
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // components
-import { indexPage } from './pages/indesPage'
+import { IndexPage } from './pages/indexPage'
 
 function App() {
   return (
     <BrowserRouter>
       <Tutorial />
-      <Route path="/sign-in" component={indexPage} />
+      <IndexPage />
     </BrowserRouter>
   );
 }

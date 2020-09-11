@@ -7,9 +7,6 @@ import { useForm } from './useForm';
 // validate login 
 import { validate } from './validateLogin';
 
-// import type
-import {Props} from './useForm';
-
 // pictures
 import house from '../../pictures/house.svg';
 import lock from '../../pictures/lock.svg';
