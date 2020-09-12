@@ -12,12 +12,18 @@ import house from '../../pictures/house.svg';
 import lock from '../../pictures/lock.svg';
 import eye from '../../pictures/shape.svg';
 import close from '../../pictures/close.svg';
+import { useDispatch } from 'react-redux';
+
+// fetchAsync
+import {fetchAsync} from '../../redux/reducers/actions'
 
 export const SignIn = () => {
-    const { handelChange, handleOnSubmit,setValues, values, errors } = useForm(submit, validate);
+    const { handelChange, handleOnSubmit, setValues, values, errors } = useForm(submit, validate);
+    const dispatch = useDispatch();
 
     function submit() {
         console.log('submitted succesfully')
+        dispatch(fetchAsync())
     }
 
     const handelDelete = () => {
