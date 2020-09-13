@@ -15,7 +15,7 @@ import close from '../../pictures/close.svg';
 import { useDispatch } from 'react-redux';
 
 // fetchAsync
-import {fetchAsync} from '../../redux/reducers/actions'
+import { fetchAsync } from '../../redux/reducers/actions'
 
 export const SignIn = () => {
     const { handelChange, handleOnSubmit, setValues, values, errors } = useForm(submit, validate);
@@ -23,12 +23,12 @@ export const SignIn = () => {
 
     function submit() {
         console.log('submitted succesfully')
-        dispatch(fetchAsync())
+        dispatch(fetchAsync(values))
     }
 
     const handelDelete = () => {
         console.log('submitted sad')
-        setValues({ personalAccount: ""})
+        setValues({ personalAccount: "" })
     }
 
     return (
@@ -66,7 +66,7 @@ export const SignIn = () => {
                             onChange={handelChange}
                         />
                         <img onClick={handelDelete} src={lock} alt="" className={classes.input_img} />
-                        <img src={eye} alt="" className={classes.input_second_img} />    
+                        <img src={eye} alt="" className={classes.input_second_img} />
                     </div>
                     {errors.password && <p className={classes.errors}>{errors.password}</p>}
 

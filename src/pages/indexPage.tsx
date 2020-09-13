@@ -7,14 +7,24 @@ import { useSelector } from 'react-redux';
 // pages
 import { HomePage } from './homePage/homePage'
 
+//type 
+
+type UserState = {
+    currentUser: string | null;
+};
+
 export const IndexPage = () => {
-    // const auth = useSelector(state => state.auth)
+
+    // const auth = useSelector((state: any) => {
+    //     currentUser: state.auth.currentUser
+    // });
+
     return (
         <>
             <MainLayouts>
                 <Switch>
                     {
-                        false // path
+                        false
                             ? (
                                 <Route exact path="/" component={HomePage} />
                             ) : (

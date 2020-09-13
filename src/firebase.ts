@@ -2,7 +2,9 @@ import firebase from "firebase";
 import 'firebase/firestore';
 import 'firebase/auth';
 
-const app = firebase.initializeApp({
+
+
+const firebaseConfig = {
     apiKey: "AIzaSyBnU24N3nDSKOb590epRbw8q_6gqDUCB8s",
     authDomain: "fir-react-auth-4915c.firebaseapp.com",
     databaseURL: "https://fir-react-auth-4915c.firebaseio.com",
@@ -10,8 +12,10 @@ const app = firebase.initializeApp({
     storageBucket: "fir-react-auth-4915c.appspot.com",
     messagingSenderId: "237490043936",
     appId: "1:237490043936:web:bb5322e9e45cb9575f5045"
-});
+};
 
-firebase.firestore()
+firebase.initializeApp(firebaseConfig);
 
-export default firebase;
+export const auth = firebase.auth();
+
+export default firebase

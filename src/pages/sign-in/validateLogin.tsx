@@ -9,7 +9,7 @@ export function validate(values: any) {
 
     if (!values.personalAccount) {
         errors.personalAccount = "Номер лицевого счета не введен"
-    } else if (values.personalAccount.length <= 10 || values.personalAccount.length >= 12) {
+    } else if (values.personalAccount.length <= 10) {
         errors.personalAccount = "Номер лицевого счета должен состоять из 11 цифр"
     }
 
