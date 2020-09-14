@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router'
 import classes from './signIn.module.scss';
 
 //custom hook
@@ -12,14 +14,21 @@ import house from '../../pictures/house.svg';
 import lock from '../../pictures/lock.svg';
 import eye from '../../pictures/shape.svg';
 import close from '../../pictures/close.svg';
-import { useDispatch } from 'react-redux';
 
 // fetchAsync
 import { fetchAsync } from '../../redux/reducers/actions'
 
 export const SignIn = () => {
-    const { handelChange, handleOnSubmit, setValues, values, errors } = useForm(submit, validate);
+    const { isFetching, error, currentUser } = useSelector((state: any) => state.auth)
     const dispatch = useDispatch();
+    const { handelChange, handleOnSubmit, setValues, values, errors } = useForm(submit, validate);
+
+    if (currentUser) {
+        return <Redirect to="/homepage" />
+    }
+
+    const errorMessageJSX = error && <p>{error}</p>;
+    const loaderJSX = isFetching && <p>Loading data from API...</p>
 
     function submit() {
         console.log('submitted succesfully')
@@ -87,6 +96,8 @@ export const SignIn = () => {
                     </div>
                 </div>
             </form>
+            {errorMessageJSX}
+            {loaderJSX}
         </>
     )
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import { MainLayouts } from '../components/layouts/mainLayouts';
+import { HomePage } from './homePage/homePage'
 import { SignIn } from './sign-in/signIn';
 import { Router, Route, Switch, RouteProps } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-// pages
-import { HomePage } from './homePage/homePage'
+// components
+import { Tutorial } from './tutorial/tutorial'
 
 //type 
 
@@ -13,29 +14,20 @@ type UserState = {
     currentUser: string | null;
 };
 
+
 export const IndexPage = () => {
 
-    // const auth = useSelector((state: any) => {
-    //     currentUser: state.auth.currentUser
-    // });
+    const auth = useSelector((state: any) => state.auth.currentUser);
 
     return (
-        <>
+        <Switch>
+            {!auth && <Route exact path="/" component={Tutorial} />}
             <MainLayouts>
-                <Switch>
-                    {
-                        false
-                            ? (
-                                <Route exact path="/" component={HomePage} />
-                            ) : (
-                                <>
-                                    <Route path="/sign-in" component={SignIn} />
-                                </>
-                            )
-                    }
-                    <SignIn />
-                </Switch>
+                <>
+                    <Route path="/homepage" component={HomePage} />
+                    <Route path="/sign-in" component={SignIn} />
+                </>
             </MainLayouts>
-        </>
+        </Switch>
     )
 }
